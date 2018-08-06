@@ -1,5 +1,5 @@
 # Build step
-FROM golang:latest AS Build
+FROM golang:latest AS build
 
 RUN mkdir -p $GOPATH/src/github.com/wmena/hello-world-go
 ADD . $GOPATH/src/github.com/wmena/hello-world-go
