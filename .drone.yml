@@ -37,6 +37,7 @@ pipeline:
     zone: europe-west2-c
     cluster: atabey-cluster
     namespace: ${DRONE_BRANCH}
+    token: [google_credentials]
     environment:
       - USER=root
     vars:
