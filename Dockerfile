@@ -4,7 +4,7 @@ FROM golang:latest AS build
 RUN mkdir -p $GOPATH/src/github.com/wmena/hello-world-go
 ADD . $GOPATH/src/github.com/wmena/hello-world-go
 WORKDIR $GOPATH/src/github.com/wmena/hello-world-go
-RUN go get -u github.com/goland/dep/cmd/dep
+RUN go get -u github.com/golang/dep/cmd/dep
 RUN dep ensure -vendor-only
 RUN CGO_ENABLED=0 go build -o /hello-world-go
 
