@@ -2,4 +2,4 @@
 
 # Hello World Go
 
-An example application to learn about Kubernetes engine, Google Cloud and Drone.io.
+An example application to learn about Kubernetes engine, Google Cloud and Drone.io
