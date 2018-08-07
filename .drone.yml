@@ -31,22 +31,3 @@ pipeline:
     when:
       event: push
       branch: master
-
-  gke:
-    image: nytimes/drone-gke
-    zone: europe-west2-c
-    cluster: atabey-cluster
-    namespace: ${DRONE_BRANCH}
-    token: [google_credentials]
-    environment:
-      - USER=root
-    vars:
-      image: gcr.io/atabey-consulting/hello-world-go:${DRONE_COMMIT}
-      app: hello-world-go
-      env: prod
-      user: ${USER}
-    expand_env_var: true
-    secrets: [google_credentials]
-    when:
-      event: push
-      branch: master
